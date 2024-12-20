@@ -8,14 +8,14 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
-  const { language, setLanguage, t } = useLanguage();
+  const { language, setLanguage, translate } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
   const navigation = [
-    { name: t("nav.home"), href: "/" },
-    { name: t("nav.pricing"), href: "/pricing" },
-    { name: t("nav.gallery"), href: "/gallery" },
-    { name: t("nav.contact"), href: "/contact" },
+    { name: translate("nav.home"), href: "/" },
+    { name: translate("nav.pricing"), href: "/pricing" },
+    { name: translate("nav.gallery"), href: "/gallery" },
+    { name: translate("nav.contact"), href: "/contact" },
   ];
 
   return (
