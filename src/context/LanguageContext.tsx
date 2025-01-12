@@ -29,7 +29,7 @@ function ClientLanguageProvider({ children }: { children: ReactNode }) {
     setMounted(true);
   }, []);
 
-  // Function to translate text
+  // * Function to translate text
   const translate = (key: string): string => {
     return translations[language][key as keyof typeof translations.en] || key;
   };

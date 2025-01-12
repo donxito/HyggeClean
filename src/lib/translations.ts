@@ -53,6 +53,42 @@ export const translations = {
     "contact.sending": "Sender...",
     "contact.successMessage": "Tak for din besked! Jeg vender tilbage snarest.",
     "contact.errorMessage": "Der opstod en fejl. Prøv venligst igen.",
+    // Gallery Section
+    "gallery.title": "Før og Efter Galleri",
+    "gallery.description":
+      "Se transformationen vores professionelle rengøringsservice kan bringe til dit hjem",
+    "gallery.viewComparison": "Se sammenligning",
+    "gallery.before": "Før",
+    "gallery.after": "Efter",
+
+    // Gallery Categories
+    "gallery.category.Kitchen": "Køkken",
+    "gallery.category.Bathroom": "Badeværelse",
+
+    // Gallery Items
+    "gallery.item.oven.title": "Grundig Ovnrengøring",
+    "gallery.item.oven.description":
+      "Ovn transformation med detaljeret rengøring",
+
+    "gallery.item.shower.title": "Grundig Badeværelsesrengøring",
+    "gallery.item.shower.description":
+      "Brusekabine transformation med detaljeret rengøring",
+
+    "gallery.item.kitchen.title": "Grundig Køkkenrengøring",
+    "gallery.item.kitchen.description":
+      "Komplet køkken transformation med detaljeret rengøring",
+
+    "gallery.item.bathroom.title": "Grundig Badeværelsesrengøring",
+    "gallery.item.bathroom.description":
+      "Komplet badeværelse transformation med detaljeret rengøring",
+
+    "gallery.item.tap.title": "Grundig Vandhane Rengøring",
+    "gallery.item.tap.description":
+      "Transformation af vandhane med detaljeret rengøring",
+
+    "gallery.item.wc.title": "Grundig Toilet Rengøring",
+    "gallery.item.wc.description":
+      "Komplet toilet transformation med detaljeret rengøring",
   },
   en: {
     "nav.home": "Home",
@@ -99,5 +135,41 @@ export const translations = {
     "contact.successMessage":
       "Thank you for your message! I'll get back to you soon.",
     "contact.errorMessage": "An error occurred. Please try again.",
+    // Gallery Section
+    "gallery.title": "Before & After Gallery",
+    "gallery.description":
+      "See the transformation our professional cleaning service can bring to your space",
+    "gallery.viewComparison": "View Comparison",
+    "gallery.before": "Before",
+    "gallery.after": "After",
+
+    // Gallery Categories
+    "gallery.category.Kitchen": "Kitchen",
+    "gallery.category.Bathroom": "Bathroom",
+
+    // Gallery Items
+    "gallery.item.oven.title": "Oven Deep Clean",
+    "gallery.item.oven.description":
+      "Oven transformation with detailed cleaning",
+
+    "gallery.item.shower.title": "Bathroom Deep Clean",
+    "gallery.item.shower.description":
+      "Shower transformation with detailed cleaning",
+
+    "gallery.item.kitchen.title": "Kitchen Deep Clean",
+    "gallery.item.kitchen.description":
+      "Complete kitchen transformation with detailed cleaning",
+
+    "gallery.item.bathroom.title": "Bathroom Deep Clean",
+    "gallery.item.bathroom.description":
+      "Complete bathroom transformation with detailed cleaning",
+
+    "gallery.item.tap.title": "Kitchen Tap Deep Clean",
+    "gallery.item.tap.description":
+      "Kitchen tap transformation with detailed cleaning",
+
+    "gallery.item.wc.title": "Toilet Deep Clean",
+    "gallery.item.wc.description":
+      "Complete toilet transformation with detailed cleaning",
   },
 } as const;
