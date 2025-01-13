@@ -97,7 +97,7 @@ export function Hero() {
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 hover:scale-[1.02] group-hover:shadow-3xl">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                 <Image
-                  src="/images/maya-hero.jpg"
+                  src="/images/maya-hero.webp"
                   alt="Maya from HyggeClean"
                   fill
                   className="object-cover object-center transition-transform duration-700 group-hover:scale-105"

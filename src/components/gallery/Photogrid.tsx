@@ -2,7 +2,7 @@
 
 import { useLanguage } from "@/context/LanguageContext";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import {
   Dialog,
@@ -16,7 +16,7 @@ import { Camera, ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { galleryItems } from "@/lib/galleryItems";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-//import { GalleryGridSkeleton } from "@/lib/loadingStates";
+import { GalleryGridSkeleton } from "@/lib/loadingStates";
 
 // * Before/After slider component
 const BeforeAfterSlider = ({
@@ -102,7 +102,7 @@ export default function PhotoGrid() {
   const { translate } = useLanguage();
 
   const [category, setCategory] = useState("all");
-  //const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   const headerRef = useScrollAnimation<HTMLDivElement>();
   const categoriesRef = useScrollAnimation<HTMLDivElement>({
@@ -132,18 +132,18 @@ export default function PhotoGrid() {
           return itemCategory === category;
         });
 
-  // useEffect(() => {
-  //   // Simulate loading time
-  //   const timer = setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 1000);
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
 
-  //   return () => clearTimeout(timer);
-  // }, []);
+    return () => clearTimeout(timer);
+  }, []);
 
-  // if (isLoading) {
-  //   return <GalleryGridSkeleton />;
-  // }
+  if (isLoading) {
+    return <GalleryGridSkeleton />;
+  }
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-12">
