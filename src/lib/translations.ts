@@ -36,6 +36,7 @@ export const translations = {
     "up to 3 hours": "op til 3 timer",
     "4-5 hours": "4-5 timer",
     "up to 7 hours": "op til 7 timer",
+    // Contact Section
     "contact.title": "Kontakt Mig",
     "contact.name": "Navn",
     "contact.namePlaceholder": "Dit fulde navn",
@@ -89,6 +90,38 @@ export const translations = {
     "gallery.item.wc.title": "Grundig Toilet Rengøring",
     "gallery.item.wc.description":
       "Komplet toilet transformation med detaljeret rengøring",
+    // Features Section
+    "features.title": "Hvorfor vælge HyggeClean?",
+    "features.subtitle": "Professionel rengøring med et personligt touch",
+
+    "features.quality.title": "Kvalitetsrengøring",
+    "features.quality.description":
+      "Vi bruger kun miljøvenlige produkter og leverer konsistent høj kvalitet",
+
+    "features.time.title": "Pålidelig & Punktlig",
+    "features.time.description":
+      "Respekterer din tid med præcis timing og pålidelig service",
+
+    "features.trust.title": "Troværdig Service",
+    "features.trust.description":
+      "Fuldt forsikret og pålidelig rengøringsservice du kan stole på",
+
+    "features.eco.title": "Miljøvenlig",
+    "features.eco.description":
+      "Bæredygtige rengøringsløsninger der er sikre for dit hjem og miljøet",
+
+    "features.experience.title": "Erfaren & Professionel",
+    "features.experience.description":
+      "Over et års erfaring med professionel rengøring i København",
+
+    "features.flexible.title": "Fleksible Løsninger",
+    "features.flexible.description":
+      "Skræddersyede rengøringsplaner der passer til dine behov",
+    //whatsapp
+    "whatsapp.button": "Chat på WhatsApp",
+    "whatsapp.text": "Chat med mig",
+    "sms.button": "Send SMS/iMessage",
+    "sms.text": "Send mig en besked",
   },
   en: {
     "nav.home": "Home",
@@ -171,5 +204,37 @@ export const translations = {
     "gallery.item.wc.title": "Toilet Deep Clean",
     "gallery.item.wc.description":
       "Complete toilet transformation with detailed cleaning",
+    // Features Section
+    "features.title": "Why Choose HyggeClean?",
+    "features.subtitle": "Professional cleaning with a personal touch",
+
+    "features.quality.title": "Quality Cleaning",
+    "features.quality.description":
+      "We use only eco-friendly products and deliver consistent high quality",
+
+    "features.time.title": "Reliable & Punctual",
+    "features.time.description":
+      "Respects your time with precise timing and dependable service",
+
+    "features.trust.title": "Trustworthy Service",
+    "features.trust.description":
+      "Fully insured and reliable cleaning service you can trust",
+
+    "features.eco.title": "Eco-Friendly",
+    "features.eco.description":
+      "Sustainable cleaning solutions safe for your home and the environment",
+
+    "features.experience.title": "Experienced & Professional",
+    "features.experience.description":
+      "Over a year of professional cleaning experience in Copenhagen",
+
+    "features.flexible.title": "Flexible Solutions",
+    "features.flexible.description":
+      "Tailored cleaning plans that fit your needs",
+    //whatsapp
+    "whatsapp.button": "Chat on WhatsApp",
+    "whatsapp.text": "Chat with me",
+    "sms.button": "Send SMS/iMessage",
+    "sms.text": "Send me a message",
   },
 } as const;

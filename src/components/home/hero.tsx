@@ -18,70 +18,67 @@ export function Hero() {
   ];
 
   return (
-    <section className="relative bg-gradient-to-b from-blue-50 to-white overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-32 w-96 h-96 bg-blue-50 rounded-full opacity-50 blur-3xl" />
-        <div className="absolute -bottom-40 -left-32 w-96 h-96 bg-indigo-50 rounded-full opacity-50 blur-3xl" />
+    <section className="relative overflow-hidden bg-gradient-to-b from-primary-50 to-white">
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute -top-40 -right-32 w-96 h-96 bg-primary-100/50 rounded-full opacity-50 blur-3xl animate-blob" />
+        <div className="absolute top-40 -left-32 w-96 h-96 bg-cozy-100/50 rounded-full opacity-50 blur-3xl animate-blob animation-delay-2000" />
+        <div className="absolute -bottom-40 left-1/2 w-96 h-96 bg-hygge-100/50 rounded-full opacity-50 blur-3xl animate-blob animation-delay-4000" />
       </div>
 
-      {/* Background Pattern */}
-      <div className="absolute top-0 right-0 -bottom-32 hidden lg:block w-1/2">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-indigo-50/50">
-          <svg
-            className="h-full w-full text-white/90"
-            viewBox="0 0 100 100"
-            preserveAspectRatio="none"
-            fill="currentColor"
-          >
-            <polygon points="0,0 100,0 50,100 0,100" />
-          </svg>
-        </div>
-      </div>
-
-      {/* Content */}
+      {/* Content wrapper */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text Content */}
-          <div className="space-y-6 md:space-y-8 text-center lg:text-left">
-            <div className="space-y-2">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
+          <div className="space-y-8 text-center lg:text-left">
+            <div className="space-y-4">
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-hygge-900 tracking-tight text-shadow-lg leading-tight">
                 {translate("hero.title")}
               </h1>
-              <p className="text-xl md:text-2xl text-gray-600 font-light">
+              <p className="font-sans text-xl md:text-2xl text-hygge-600 font-light tracking-wide">
                 {translate("hero.subtitle")}
               </p>
             </div>
 
-            <div className="prose prose-lg text-gray-500">
+            <div className="prose prose-lg text-hygge-600 max-w-none font-sans leading-relaxed">
               {translate("about.description")}
             </div>
 
-            <Card className="bg-white/80 backdrop-blur-sm shadow-lg">
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-6">
+            {/* Features Card */}
+            <Card className="bg-white/80 backdrop-blur-lg border-primary-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6">
                 {features.map((feature, index) => (
-                  <li key={index} className="flex items-center space-x-3">
-                    <feature.icon className="h-5 w-5 text-blue-500" />
-                    <span className="text-gray-700">{feature.text}</span>
+                  <li
+                    key={index}
+                    className="flex items-center gap-4 group hover:transform hover:scale-105 transition-transform duration-300"
+                  >
+                    <div className="p-2 rounded-lg bg-primary-50 group-hover:bg-primary-100 transition-colors duration-300">
+                      <feature.icon className="h-6 w-6 text-primary-600" />
+                    </div>
+                    <span className="text-hygge-700 font-medium">
+                      {feature.text}
+                    </span>
                   </li>
                 ))}
               </ul>
             </Card>
 
+            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-              <Link href="/contact">
+              <Link href="/contact" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-white w-full sm:w-auto px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="w-full bg-primary-600 hover:bg-primary-700 text-white font-medium px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group relative overflow-hidden"
                 >
-                  {translate("hero.cta")}
+                  <span className="relative z-10">{translate("hero.cta")}</span>
+                  <div className="absolute inset-0 bg-gradient-shine bg-[length:200%_100%] animate-shine" />
                 </Button>
               </Link>
-              <Link href="/gallery">
+              <Link href="/gallery" className="w-full sm:w-auto">
                 <Button
                   variant="outline"
                   size="lg"
-                  className="w-full sm:w-auto px-8 py-6 text-lg hover:bg-gray-50 transition-all duration-300"
+                  className="w-full px-8 py-6 text-lg border-2 border-primary-200 hover:border-primary-300 text-primary-700 hover:bg-primary-50 rounded-xl transition-all duration-300 hover:-translate-y-1"
                 >
                   {translate("nav.gallery")}
                 </Button>
@@ -91,23 +88,28 @@ export function Hero() {
 
           {/* Image Container */}
           <div className="relative w-full max-w-lg mx-auto lg:max-w-none">
-            <div className="relative">
+            <div className="relative group">
               {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply opacity-70 blur-2xl animate-blob" />
-              <div className="absolute -bottom-4 -left-4 w-72 h-72 bg-green-100 rounded-full mix-blend-multiply opacity-70 blur-2xl animate-blob animation-delay-2000" />
+              <div className="absolute -top-4 -right-4 w-72 h-72 bg-primary-100/70 rounded-full mix-blend-multiply opacity-70 blur-2xl animate-blob" />
+              <div className="absolute -bottom-4 -left-4 w-72 h-72 bg-cozy-100/70 rounded-full mix-blend-multiply opacity-70 blur-2xl animate-blob animation-delay-2000" />
 
               {/* Main image */}
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.01] transition-transform duration-300">
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 hover:scale-[1.02] group-hover:shadow-3xl">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                 <Image
                   src="/images/maya-hero.jpg"
                   alt="Maya from HyggeClean"
                   fill
-                  className="object-cover object-center"
+                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                   priority
                 />
-                {/* Subtle overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
+                {/* Subtle overlay with gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
+
+              {/* Floating accent elements */}
+              <div className="absolute -right-6 top-6 w-24 h-24 bg-primary-100 rounded-full opacity-90 animate-float" />
+              <div className="absolute -left-6 bottom-6 w-20 h-20 bg-cozy-100 rounded-full opacity-90 animate-float animation-delay-2000" />
             </div>
           </div>
         </div>
