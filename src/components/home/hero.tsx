@@ -32,10 +32,10 @@ export function Hero() {
           {/* Text Content */}
           <div className="space-y-8 text-center lg:text-left">
             <div className="space-y-4">
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-hygge-900 tracking-tight text-shadow-lg leading-tight">
+              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-hygge-900 tracking-tight text-shadow-lg leading-tight">
                 {translate("hero.title")}
               </h1>
-              <p className="font-sans text-xl md:text-2xl text-hygge-600 font-light tracking-wide">
+              <p className="font-sans text-lg md:text-xl text-hygge-600 font-light tracking-wide">
                 {translate("hero.subtitle")}
               </p>
             </div>
@@ -45,7 +45,7 @@ export function Hero() {
             </div>
 
             {/* Features Card */}
-            <Card className="bg-white/80 backdrop-blur-lg border-primary-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+            <Card className="bg-white/80 backdrop-blur-lg border-primary-100 shadow-xl hover:shadow-xl transition-shadow duration-300">
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6">
                 {features.map((feature, index) => (
                   <li
@@ -68,7 +68,7 @@ export function Hero() {
               <Link href="/contact" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="w-full bg-primary-600 hover:bg-primary-700 text-white font-medium px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group relative overflow-hidden"
+                  className="w-full bg-primary-600 hover:bg-primary-700 text-white font-medium px-6 py-4 text-md rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group relative overflow-hidden"
                 >
                   <span className="relative z-10">{translate("hero.cta")}</span>
                   <div className="absolute inset-0 bg-gradient-shine bg-[length:200%_100%] animate-shine" />
@@ -78,7 +78,7 @@ export function Hero() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="w-full px-8 py-6 text-lg border-2 border-primary-200 hover:border-primary-300 text-primary-700 hover:bg-primary-50 rounded-xl transition-all duration-300 hover:-translate-y-1"
+                  className="w-full px-6 py-4 text-md border-2 border-primary-200 hover:border-primary-300 text-primary-700 hover:bg-primary-50 rounded-xl transition-all duration-300 hover:-translate-y-1"
                 >
                   {translate("nav.gallery")}
                 </Button>
@@ -87,7 +87,7 @@ export function Hero() {
           </div>
 
           {/* Image Container */}
-          <div className="relative w-full max-w-lg mx-auto lg:max-w-none">
+          <div className="relative w-full max-w-sm mx-auto lg:max-w-md">
             <div className="relative group">
               {/* Decorative elements */}
               <div className="absolute -top-4 -right-4 w-72 h-72 bg-primary-100/70 rounded-full mix-blend-multiply opacity-70 blur-2xl animate-blob" />

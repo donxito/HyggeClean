@@ -7,12 +7,10 @@ import Link from "next/link";
 import { standardPackages, addOns, hourlyServices } from "@/lib/pricing";
 import { Sparkles, Star } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-// import { useEffect, useState } from "react";
-// import { PricingCardSkeleton } from "@/lib/loadingStates";
 
 export function PricingCards() {
-  //const [isLoading, setIsLoading] = useState(true);
   const { translate } = useLanguage();
+
   const headerRef = useScrollAnimation<HTMLDivElement>();
   const packagesRef = useScrollAnimation<HTMLDivElement>({
     threshold: 0.2,
@@ -26,19 +24,6 @@ export function PricingCards() {
     threshold: 0.2,
     animation: "animate-fade-in-right",
   });
-
-  // useEffect(() => {
-  //   // Simulate loading time
-  //   const timer = setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 500);
-
-  //   return () => clearTimeout(timer);
-  // }, []);
-
-  // if (isLoading) {
-  //   return <PricingCardSkeleton />;
-  // }
 
   return (
     <div className="space-y-16 py-12">
@@ -79,19 +64,19 @@ export function PricingCards() {
                     }`}
                   >
                     <pkg.icon
-                      className={`h-6 w-6 ${
+                      className={`h-5 w-5 ${
                         pkg.featured ? "text-primary-500" : "text-gray-500"
                       }`}
                     />
                   </div>
-                  <h3 className="font-serif text-xl font-semibold">
+                  <h3 className="font-serif text-lg font-semibold">
                     {translate(pkg.titleEn)}
                   </h3>
                 </div>
 
                 <div className="mt-4">
                   <div className="flex items-baseline">
-                    <span className="text-4xl font-bold text-hygge-900">
+                    <span className="text-2xl font-bold text-hygge-900">
                       {pkg.price}
                     </span>
                     <span className="ml-2 text-gray-500">DKK</span>
@@ -183,7 +168,7 @@ export function PricingCards() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Star className="h-5 w-5 text-primary-500 flex-shrink-0" />
-                <p className="text-hygge-700">
+                <p className="text-hygge-700 ">
                   {translate("pricing.discounts.firstTime")}
                 </p>
               </div>

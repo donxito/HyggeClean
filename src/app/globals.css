@@ -103,3 +103,39 @@
 .animate-blob {
   animation: blob 7s infinite;
 }
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-size: 14px;
+    /* reduce font size */
+  }
+
+  h1 {
+    @apply font-serif text-3xl;
+    /* reduce font size */
+  }
+
+  h2 {
+    @apply font-serif text-2xl;
+    /* reduce font size */
+  }
+
+  p {
+    @apply font-sans text-lg;
+    /* reduce font size */
+  }
+
+  .card {
+    @apply py-4 px-6;
+    /* reduce padding */
+  }
+}
+
+
+

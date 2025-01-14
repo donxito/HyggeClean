@@ -25,15 +25,15 @@ const FeatureCard = ({ icon: Icon, title, description }: FeatureCardProps) => (
 
     <div className="relative">
       {/* Icon */}
-      <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary-50 text-primary-600 mb-4 group-hover:-translate-y-1 transition-transform duration-300">
-        <Icon className="w-6 h-6" />
+      <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-primary-50 text-primary-600 mb-4 group-hover:-translate-y-1 transition-transform duration-300">
+        <Icon className="w-5 h-5" />
       </div>
 
       {/* Content */}
       <h3 className="font-serif text-lg font-semibold text-hygge-900 mb-2">
         {title}
       </h3>
-      <p className="text-hygge-600">{description}</p>
+      <p className="text-hygge-600 text-sm">{description}</p>
     </div>
   </Card>
 );
@@ -84,10 +84,10 @@ export function Features() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12" ref={headerRef}>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-hygge-900 mb-4">
+          <h2 className="font-serif text-2xl md:text-3xl font-bold text-hygge-900 mb-4">
             {translate("features.title")}
           </h2>
-          <p className="text-lg text-hygge-600 max-w-2xl mx-auto">
+          <p className="text-md text-hygge-600 max-w-2xl mx-auto">
             {translate("features.subtitle")}
           </p>
         </div>
