@@ -149,7 +149,7 @@ export default function PhotoGrid() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-12">
       {/* Gallery Header */}
       <div className="text-center mb-12" ref={headerRef}>
-        <h1 className="font-serif text-4xl font-bold text-hygge-900 mb-4">
+        <h1 className="font-serif text-3xl font-bold text-primary-800 mb-4">
           {translate("gallery.title")}
         </h1>
         <p className="text-lg text-hygge-600 max-w-2xl mx-auto">

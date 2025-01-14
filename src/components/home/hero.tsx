@@ -32,7 +32,7 @@ export function Hero() {
           {/* Text Content */}
           <div className="space-y-8 text-center lg:text-left">
             <div className="space-y-4">
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-hygge-900 tracking-tight text-shadow-lg leading-tight">
+              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-primary-800 tracking-tight text-shadow-lg leading-tight">
                 {translate("hero.title")}
               </h1>
               <p className="font-sans text-lg md:text-xl text-hygge-600 font-light tracking-wide">

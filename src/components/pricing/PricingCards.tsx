@@ -30,7 +30,7 @@ export function PricingCards() {
       {/* Standard Packages */}
       <section>
         <div className="text-center mb-12" ref={headerRef}>
-          <h2 className="font-serif text-3xl font-bold text-hygge-900 mb-4">
+          <h2 className="font-serif text-3xl font-bold text-primary-800  mb-4">
             {translate("pricing.packages.title")}
           </h2>
           <p className="text-lg text-hygge-600 max-w-2xl mx-auto">

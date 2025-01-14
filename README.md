@@ -53,7 +53,7 @@ HyggeClean is a modern, bilingual (Danish/English) web application for a profess
 - Next.js 15 (React 19)
 - Tailwind CSS
 - shadcn/ui components
-- JavaScript
+- Typescript
 
 ### Design
 

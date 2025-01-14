@@ -150,6 +150,7 @@ export const translations = {
       "Recommend a friend and both receive 15% off on your next cleaning",
     "pricing.discounts.note":
       "Discounts apply only once per cleaning session and cannot be combined",
+    // Contact Section
     "contact.title": "Contact Me",
     "contact.name": "Name",
     "contact.namePlaceholder": "Your full name",

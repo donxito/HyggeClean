@@ -84,7 +84,7 @@ export function Features() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12" ref={headerRef}>
-          <h2 className="font-serif text-2xl md:text-3xl font-bold text-hygge-900 mb-4">
+          <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary-800 mb-4">
             {translate("features.title")}
           </h2>
           <p className="text-md text-hygge-600 max-w-2xl mx-auto">

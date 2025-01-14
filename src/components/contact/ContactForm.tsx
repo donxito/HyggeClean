@@ -60,12 +60,11 @@ export function ContactForm() {
   };
 
   return (
-    <Card className="w-full max-w-2xl mx-auto" ref={formRef}>
+    <Card className="w-full max-w-2xl mx-auto mt-12" ref={formRef}>
       <CardHeader className="text-center space-y-2">
-        <CardTitle className="font-serif text-2xl text-hygge-900">
+        <CardTitle className="font-serif text-2xl text-primary-800">
           {translate("contact.title")}
         </CardTitle>
-        <p className="text-hygge-600">{translate("contact.description")}</p>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-6">
