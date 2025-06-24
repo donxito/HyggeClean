@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Calendar, Send, Loader2 } from "lucide-react";
+import { Send, Loader2 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export function ContactForm() {
@@ -156,9 +156,8 @@ export function ContactForm() {
                 name="preferredDate"
                 type="date"
                 required
-                className="w-full transition-all duration-200 hover:border-primary-300 focus:border-primary-500"
+                className="w-min transition-all duration-200 hover:border-primary-300 focus:border-primary-500"
               />
-              <Calendar className="absolute right-3 top-2.5 h-5 w-5 text-gray-400" />
             </div>
           </div>
 
