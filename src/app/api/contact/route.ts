@@ -1,21 +1,30 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-// Initialize Resend with error handling
-const resendApiKey = process.env.RESEND_API_KEY;
-if (!resendApiKey) {
-  throw new Error("RESEND_API_KEY is not defined in environment variables");
-}
-
-const resend = new Resend(resendApiKey);
-
 export async function POST(request: Request) {
-  const emailRecipient = process.env.RESEND_EMAIL_ADDRESS;
-  if (!emailRecipient) {
-    throw new Error(
-      "RESEND_EMAIL_ADDRESS is not defined in environment variables"
+  // Check environment variables at request time, not module initialization
+  const resendApiKey = process.env.RESEND_API_KEY;
+  if (!resendApiKey) {
+    console.error("RESEND_API_KEY is not defined in environment variables");
+    return NextResponse.json(
+      { error: "Email service configuration error" },
+      { status: 500 }
     );
   }
+
+  const emailRecipient = process.env.RESEND_EMAIL_ADDRESS;
+  if (!emailRecipient) {
+    console.error(
+      "RESEND_EMAIL_ADDRESS is not defined in environment variables"
+    );
+    return NextResponse.json(
+      { error: "Email service configuration error" },
+      { status: 500 }
+    );
+  }
+
+  // Initialize Resend here, after validation
+  const resend = new Resend(resendApiKey);
 
   try {
     // Parse the request body with error handling

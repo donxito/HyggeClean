@@ -7,14 +7,14 @@ import { Footer } from "@/components/layout/footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 //import { ContactButtons } from "@/components/layout/ContactButtons";
 
-// Elegant serif font for headings
+// serif font for headings
 const playfair = Playfair_Display({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-playfair",
 });
 
-// Clean sans-serif font for body text
+// sans-serif font for body text
 const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
