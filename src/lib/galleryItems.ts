@@ -40,4 +40,20 @@ export const galleryItems: readonly GalleryItem[] = [
     afterImage: "/images/wc-after.jpg",
     categoryKey: "gallery.category.Bathroom",
   },
+  {
+    id: 5,
+    titleKey: "gallery.item.shower.title",
+    descriptionKey: "gallery.item.shower.description",
+    beforeImage: "/images/shower1-before.png",
+    afterImage: "/images/shower1-after.png",
+    categoryKey: "gallery.category.Bathroom",
+  },
+  {
+    id: 6,
+    titleKey: "gallery.item.shower.title",
+    descriptionKey: "gallery.item.shower.description",
+    beforeImage: "/images/shower2-before.png",
+    afterImage: "/images/shower2-after.png",
+    categoryKey: "gallery.category.Bathroom",
+  },
 ] as const;
